@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterChon | Agua Purificada, Autolavado y Super</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .gradient-blue { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: -1;
+        }
+        @media (max-width: 768px) { .step-line::after { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar Profesional Azul -->
+    <nav class="fixed w-full z-50 bg-blue-900/95 backdrop-blur-md border-b border-blue-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-blue-900 text-2xl shadow-inner">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <span class="text-2xl font-black text-white tracking-tighter italic">Water<span class="text-blue-400">Chon</span></span>
+                </div>
+                
+                <!-- Links de Navegación -->
+                <div class="hidden md:flex space-x-8 font-semibold text-blue-100/90">
+                    <a href="#servicios" class="hover:text-white hover:translate-y-[-1px] transition-all duration-200">Servicios</a>
+                    <a href="#proceso" class="hover:text-white hover:translate-y-[-1px] transition-all duration-200">Calidad</a>
+                    <a href="#sucursales" class="hover:text-white hover:translate-y-[-1px] transition-all duration-200">Sucursales</a>
+                    <a href="#empleos" class="hover:text-white hover:translate-y-[-1px] transition-all duration-200">Empleos</a>
+                </div>
+
+                <!-- Botón de Acción -->
+                <a href="#contacto" class="bg-white text-blue-900 px-7 py-2.5 rounded-full font-bold hover:bg-blue-50 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 transform hover:scale-105">
+                    Contáctanos
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-blue-50 rounded-l-[100px] opacity-50"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+            <div class="flex-1 text-center lg:text-left">
+                <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-100 rounded-full">
+                    Compromiso con la Calidad
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    Agua purificada y servicios <span class="text-blue-600">confiables</span> con WaterChon
+                </h1>
+                <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0">
+                    Venta de agua purificada, autolavado profesional y super/expendio de cerveza. Somos tu grupo empresarial de confianza dedicado a tu bienestar diario.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#sucursales" class="gradient-blue text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                        <i class="fas fa-map-marker-alt"></i> Ver sucursales
+                    </a>
+                    <a href="#contacto" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition flex items-center justify-center gap-2">
+                        <i class="fas fa-phone"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+            <div class="flex-1 w-full max-w-lg lg:max-w-none">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=800" alt="Planta Purificadora de Agua WaterChon" class="w-full h-auto object-cover">
+                    <div class="absolute bottom-6 left-6 right-6 glass-card p-6 rounded-2xl shadow-lg border border-white/20">
+                        <div class="flex items-center gap-4">
+                            <div class="flex -space-x-3">
+                                <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                                <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                                <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-white" alt="User">
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-900">+500 Familias en WaterChon</p>
+                                <div class="flex text-yellow-400 text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Principales -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio Agua -->
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Agua Purificada</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Calidad WaterChon certificada</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Venta por garrafón y rellenado</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> 3 Sucursales estratégicas</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio Lavado -->
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Autolavado Pro</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Limpieza profunda detallada</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Productos de alta gama</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Cuidado experto de pintura</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio Super -->
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-xl hover:border-blue-100 transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-700 rounded-2xl flex items-center justify-center text-white text-3xl mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Super & Beer</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Cerveza nacional e importada</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Productos básicos del hogar</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-blue-500"></i> Atención ágil y amable</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Purificación -->
+    <section id="proceso" class="py-24 bg-blue-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">El Estándar WaterChon</h2>
+                <p class="text-blue-200 text-lg">Tecnología de punta para la pureza absoluta de tu agua</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 step-line relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-filter text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Filtración Inicial</h4>
+                </div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 step-line relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-vial text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Sedimentos</h4>
+                </div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 step-line relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-biohazard text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Carbón Activado</h4>
+                </div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 step-line relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-microscope text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Ósmosis Inversa</h4>
+                </div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 step-line relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-bolt text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Luz UV</h4>
+                </div>
+                <div class="relative">
+                    <div class="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 relative z-10 border-4 border-blue-900">
+                        <i class="fas fa-soap text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-sm">Sanitizado</h4>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center bg-blue-800/40 p-6 rounded-2xl max-w-3xl mx-auto border border-blue-700">
+                <p class="text-blue-100">
+                    "En WaterChon, cada etapa de purificación es monitoreada estrictamente para superar las normas de calidad nacionales."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursales -->
+    <section id="sucursales" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-center md:text-left">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Encuentra tu WaterChon</h2>
+                    <p class="text-gray-600">Sucursales diseñadas para tu comodidad</p>
+                </div>
+                <div class="bg-white px-6 py-4 rounded-2xl shadow-sm flex items-center gap-4 mx-auto md:mx-0">
+                    <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Horario Global</p>
+                        <p class="text-sm font-bold text-gray-900">Lun - Vie: 7:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sucursal Agua 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-lg text-xs font-bold uppercase mb-4">Planta de Agua</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">WaterChon Norte</h3>
+                    <div class="space-y-4 text-gray-600 mb-8">
+                        <p class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-blue-600"></i> Av. Principal 123, Col. Centro</p>
+                        <p class="flex items-center gap-3"><i class="fas fa-phone text-blue-600"></i> (555) 123-4567</p>
+                    </div>
+                    <button class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-gray-800 transition">Cómo llegar</button>
+                </div>
+
+                <!-- Sucursal Agua 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-lg text-xs font-bold uppercase mb-4">Planta de Agua</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">WaterChon Oriente</h3>
+                    <div class="space-y-4 text-gray-600 mb-8">
+                        <p class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-blue-600"></i> Calle Comercio 456, Sector Este</p>
+                        <p class="flex items-center gap-3"><i class="fas fa-phone text-blue-600"></i> (555) 234-5678</p>
+                    </div>
+                    <button class="w-full bg-gray-900 text-white py-3 rounded-xl font-bold hover:bg-gray-800 transition">Cómo llegar</button>
+                </div>
+
+                <!-- Sucursal Lavado -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 ring-2 ring-blue-500/10">
+                    <span class="inline-block px-3 py-1 bg-blue-600 text-white rounded-lg text-xs font-bold uppercase mb-4">Autolavado</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">WaterChon Car Wash</h3>
+                    <div class="space-y-4 text-gray-600 mb-8">
+                        <p class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-blue-600"></i> Libramiento Sur 789, Esquina Prol.</p>
+                        <p class="flex items-center gap-3"><i class="fas fa-phone text-blue-600"></i> (555) 345-6789</p>
+                    </div>
+                    <button class="w-full gradient-blue text-white py-3 rounded-xl font-bold hover:shadow-lg transition">Cómo llegar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bolsa de Trabajo -->
+    <section id="empleos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-blue-50 rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row gap-16">
+                <div class="flex-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Trabaja en WaterChon</h2>
+                    <p class="text-gray-600 mb-10 text-lg">Únete a una empresa líder en servicios locales. Valoramos tu esfuerzo y te ofrecemos un lugar donde crecer profesionalmente.</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                        <div class="bg-white p-4 rounded-2xl border border-blue-100 flex items-center gap-3">
+                            <i class="fas fa-users text-blue-600"></i>
+                            <span class="font-semibold text-gray-700">Ambiente WaterChon</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-blue-100 flex items-center gap-3">
+                            <i class="fas fa-money-bill-wave text-blue-600"></i>
+                            <span class="font-semibold text-gray-700">Pago Puntual</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-blue-100 flex items-center gap-3">
+                            <i class="fas fa-briefcase text-blue-600"></i>
+                            <span class="font-semibold text-gray-700">Carrera</span>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-blue-100 flex items-center gap-3">
+                            <i class="fas fa-shield-heart text-blue-600"></i>
+                            <span class="font-semibold text-gray-700">Seguridad Social</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h4 class="font-bold text-gray-900">Vacantes activas:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 text-gray-600">Ventas</span>
+                            <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 text-gray-600">Operador Industrial</span>
+                            <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 text-gray-600">Detallado Automotriz</span>
+                            <span class="px-4 py-2 bg-white rounded-full text-sm border border-gray-200 text-gray-600">Cajero(a) Super</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-blue-100">
+                        <h3 class="text-2xl font-bold mb-6">Postúlate Ahora</h3>
+                        <form id="employmentForm" class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('successMsg').classList.remove('hidden'); this.reset();">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <input type="text" placeholder="Nombre completo" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" required>
+                                <input type="tel" placeholder="WhatsApp / Teléfono" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" required>
+                            </div>
+                            <select class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none" required>
+                                <option value="">Puesto de interés</option>
+                                <option>Ventas / Atención</option>
+                                <option>Operador de Planta</option>
+                                <option>Lavador Profesional</option>
+                                <option>Cajero(a)</option>
+                            </select>
+                            <input type="text" placeholder="Dirección del domicilio" class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none">
+                            <textarea placeholder="Experiencia o comentarios..." class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl h-32 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                            <button type="submit" class="w-full gradient-blue text-white py-4 rounded-xl font-bold text-lg hover:shadow-lg transition">Enviar a Recursos Humanos</button>
+                            <p id="successMsg" class="hidden text-green-600 text-center font-bold mt-4">¡Postulación enviada con éxito! El equipo de WaterChon te contactará.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Aquí Trabajamos & Testimonios -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-3xl font-bold mb-8">Responsabilidad WaterChon</h2>
+                    <p class="text-gray-400 mb-10 leading-relaxed">
+                        Nuestra base administrativa centraliza el esfuerzo de todo nuestro equipo para asegurar que cada garrafón, cada lavado y cada compra en nuestro super cumpla con la promesa de calidad que nos caracteriza.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs tracking-widest">Sede Administrativa</h4>
+                            <p class="text-sm">Corporativo WaterChon, Piso 2.<br>Av. Libertad #500</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                <span class="text-sm font-semibold">Cero Contaminación</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                <span class="text-sm font-semibold">Trato Ético</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                <span class="text-sm font-semibold">Compromiso Local</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col justify-center">
+                    <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 relative">
+                        <div class="absolute -top-6 -left-6 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl shadow-lg">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="flex text-yellow-500 mb-6 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-xl italic text-gray-300 mb-6 leading-relaxed">
+                            "Confío plenamente en WaterChon. El agua tiene un sabor excelente y siempre están abiertos cuando los necesito. Un grupo de confianza."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full overflow-hidden">
+                                <img src="https://i.pravatar.cc/100?u=customer" alt="Cliente WaterChon">
+                            </div>
+                            <div>
+                                <h5 class="font-bold">Juan Pérez</h5>
+                                <p class="text-sm text-gray-500">Cliente de WaterChon Norte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Final CTA -->
+    <footer id="contacto" class="gradient-blue text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-6">Calidad, servicio y confianza en WaterChon</h2>
+            <p class="text-blue-100 mb-12 max-w-xl mx-auto">Tu bienestar es nuestra prioridad. Visítanos hoy y vive la experiencia de servicios de primer nivel.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-20">
+                <a href="#sucursales" class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-50 transition">Ver ubicaciones WaterChon</a>
+                <a href="tel:5551234567" class="border-2 border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-phone"></i> Llamar Directo
+                </a>
+            </div>
+
+            <hr class="border-white/10 mb-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-blue-200 text-sm">
+                <div class="flex items-center gap-2 text-white">
+                    <div class="w-8 h-8 bg-white/10 rounded flex items-center justify-center text-lg">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <span class="text-2xl font-black italic tracking-tighter">Water<span class="text-blue-200">Chon</span></span>
+                </div>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition">Privacidad</a>
+                    <a href="#" class="hover:text-white transition">Términos de Servicio</a>
+                    <a href="#" class="hover:text-white transition">Vacantes</a>
+                </div>
+                <p>© 2024 Grupo WaterChon. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
