@@ -125,7 +125,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="bg-white p-2 rounded-xl shadow-lg"><Droplets className="text-blue-600 w-6 h-6" /></div>
-            <span className="text-xl font-black italic uppercase italic">Water<span className="text-blue-400">Chon</span></span>
+            <span className="text-xl font-black italic uppercase">Water<span className="text-blue-400">Chon</span></span>
           </div>
           <div className="hidden lg:flex gap-8 font-bold text-xs uppercase italic">
             <a href="#servicios" className="hover:text-blue-400 transition-colors">Servicios</a>
@@ -176,7 +176,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-slate-100">
             <div className="lg:w-1/3 bg-blue-600 p-12 text-white flex flex-col justify-center">
-              <h3 className="text-4xl font-black mb-4 uppercase italic italic leading-none">Levantar <br/>Pedido</h3>
+              <h3 className="text-4xl font-black mb-4 uppercase italic leading-none">Levantar <br/>Pedido</h3>
               <div className="space-y-4 font-black uppercase text-xs mt-6">
                 <div className="flex items-center gap-3"><Truck size={20}/> Entrega Inmediata</div>
                 <div className="flex items-center gap-3"><Wallet size={20}/> Pago al Recibir</div>
@@ -208,33 +208,83 @@ export default function App() {
         </div>
       </section>
 
-      {/* Sucursales */}
+      {/* Sucursales - MAPS FIXED */}
       <section id="sucursales" className="py-24 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-black mb-16 uppercase italic text-center italic tracking-tighter">Puntos <span className="text-blue-600">WaterChon</span></h2>
+          <h2 className="text-4xl font-black mb-16 uppercase italic text-center tracking-tighter">Puntos <span className="text-blue-600">WaterChon</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {['Norte', 'Sur', 'Poniente', 'Humaya', 'Margarita'].map((loc, i) => (
-              <div key={i} className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
-                <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900">
-                  <div className="w-full h-full flex items-center justify-center text-blue-800"><MapPin size={48}/></div>
-                </div>
-                <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-blue-300" /><h4 className="text-xl font-black uppercase italic italic tracking-tighter">Planta {loc}</h4></div>
-                <p className="text-blue-100 text-sm font-bold italic opacity-70">Ubicación estratégica en Culiacán.</p>
+            {/* Planta Norte */}
+            <div className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
+              <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900 border border-blue-700/50">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58045.54941913754!2d-107.4338421453396!3d24.79510103444855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bbd249f05908e3%3A0x892a7e78d2b904d4!2sCuliac%C3%A1n%20Rosales%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1714578000000!5m2!1ses-419!2smx" 
+                  width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy">
+                </iframe>
               </div>
-            ))}
+              <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-blue-300" /><h4 className="text-xl font-black uppercase italic tracking-tighter">Planta Norte</h4></div>
+              <p className="text-blue-100 text-sm font-bold italic opacity-70">Sector Santa Fe, Culiacán.</p>
+            </div>
+
+            {/* Planta Sur */}
+            <div className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
+              <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900 border border-blue-700/50">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58055.44192452033!2d-107.3994356!3d24.8101234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bbd1d785750849%3A0xa988950892015560!2sCuliacan%2C%20Sinaloa!5e0!3m2!1ses-419!2smx!4v1714578100000!5m2!1ses-419!2smx" 
+                  width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy">
+                </iframe>
+              </div>
+              <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-blue-300" /><h4 className="text-xl font-black uppercase italic tracking-tighter">Planta Sur</h4></div>
+              <p className="text-blue-100 text-sm font-bold italic opacity-70">Blvd. Ganaderos (Frente a Expo).</p>
+            </div>
+
+            {/* Planta Poniente */}
+            <div className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
+              <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900 border border-blue-700/50">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58042.8!2d-107.45!3d24.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bbd249f05908e3%3A0x892a7e78d2b904d4!2sAguaruto%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1714578500000!5m2!1ses-419!2smx" 
+                  width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy">
+                </iframe>
+              </div>
+              <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-blue-300" /><h4 className="text-xl font-black uppercase italic tracking-tighter">Planta Poniente</h4></div>
+              <p className="text-blue-100 text-sm font-bold italic opacity-70">Bugambilias / Aeropuerto.</p>
+            </div>
+
+            {/* Humaya */}
+            <div className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
+              <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900 border border-blue-700/50">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58042.345!2d-107.42!3d24.83!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bbd26e47f7d745%3A0xe67c06232537f90!2sDesarrollo%20Urbano%20Tres%20R%C3%ADos%2C%20Culiac%C3%A1n%20Rosales%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1714578300000!5m2!1ses-419!2smx" 
+                  width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy">
+                </iframe>
+              </div>
+              <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-blue-300" /><h4 className="text-xl font-black uppercase italic tracking-tighter">Car Wash Humaya</h4></div>
+              <p className="text-blue-100 text-sm font-bold italic opacity-70">Sector Tres Ríos / Humaya.</p>
+            </div>
+
+            {/* Margarita */}
+            <div className="bg-blue-900 rounded-[2.5rem] p-6 shadow-xl border border-blue-800 text-white group transition-all hover:border-blue-400">
+              <div className="w-full h-44 rounded-3xl overflow-hidden mb-6 bg-slate-900 border border-blue-700/50">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58058.456!2d-107.38!3d24.78!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bbd0f85f3e4c4f%3A0x90f6e9f16d566c5a!2sColonia%20Margarita%2C%20Culiac%C3%A1n%20Rosales%2C%20Sin.!5e0!3m2!1ses-419!2smx!4v1714578400000!5m2!1ses-419!2smx" 
+                  width="100%" height="100%" style={{border:0}} allowFullScreen="" loading="lazy">
+                </iframe>
+              </div>
+              <div className="flex items-center gap-2 mb-1"><MapPin size={16} className="text-orange-400" /><h4 className="text-xl font-black uppercase italic tracking-tighter">Super & Six</h4></div>
+              <p className="text-blue-100 text-sm font-bold italic opacity-70">Colonia Margarita, Culiacán.</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Galería */}
       <section id="galeria" className="py-24 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-black uppercase italic text-center mb-16 italic tracking-tighter">Nuestra <span className="text-blue-500">Experiencia Visual</span></h2>
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-4xl font-black uppercase italic mb-16 italic tracking-tighter underline decoration-blue-500 underline-offset-8">Nuestra <span className="text-blue-500">Experiencia Visual</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galeria.map(img => (
               <div key={img.id} className="group relative h-80 rounded-[40px] overflow-hidden cursor-pointer" onClick={() => setSelectedImage(img.url)}>
                 <img src={img.url} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt={img.titulo} />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent flex flex-col justify-end p-8">
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent flex flex-col justify-end p-8 text-left">
                   <span className="text-blue-400 text-[10px] font-black uppercase tracking-widest">{img.tipo}</span>
                   <h4 className="text-xl font-bold italic">{img.titulo}</h4>
                 </div>
@@ -252,7 +302,11 @@ export default function App() {
             {vacantes.map(v => (
               <div key={v.id} className={`p-10 rounded-[45px] shadow-2xl border-l-8 flex flex-col justify-between text-left transition-all hover:-translate-y-2
                 ${v.color === 'blue' ? 'border-blue-600' : v.color === 'teal' ? 'border-teal-500' : 'border-slate-800'}`}>
-                <div><h4 className="text-xl font-black uppercase italic tracking-tighter mb-4">{v.titulo}</h4><p className="font-bold text-slate-500 text-sm mb-6 uppercase tracking-widest">{v.categoria}</p></div>
+                <div><h4 className="text-xl font-black uppercase italic tracking-tighter mb-2">{v.titulo}</h4><p className="font-bold text-slate-500 text-[10px] mb-6 uppercase tracking-widest">{v.categoria}</p></div>
+                <div className="space-y-2 mb-8 text-sm font-bold text-slate-600 italic">
+                  <p className="flex items-center gap-2"><Phone size={14} className="text-blue-600"/> {v.sueldo}</p>
+                  <p className="flex items-center gap-2"><ChevronRight size={14} className="text-blue-600"/> {v.horario}</p>
+                </div>
                 <button className={`w-full py-4 rounded-2xl font-black text-white uppercase text-xs tracking-widest ${v.color === 'blue' ? 'bg-blue-600' : v.color === 'teal' ? 'bg-teal-600' : 'bg-slate-900'}`}>Postularse</button>
               </div>
             ))}
@@ -263,11 +317,39 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-slate-950 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div className="space-y-6"><span className="text-3xl font-black italic italic tracking-tighter uppercase">Water<span className="text-blue-500">Chon</span></span><p className="text-slate-500 italic font-medium">Pureza garantizada en cada gota, servicio garantizado en cada sucursal.</p></div>
-          <div><h5 className="text-blue-500 font-black uppercase italic tracking-widest mb-8">Menú</h5><ul className="space-y-4 font-bold text-slate-400"><li>Servicios</li><li>Pedidos</li><li>Sucursales</li><li>Galería</li><li>Vacantes</li></ul></div>
-          <div><h5 className="text-blue-500 font-black uppercase italic tracking-widest mb-8">Contáctanos</h5><ul className="space-y-4 font-bold text-slate-400"><li>(667) 123-4567</li><li>contacto@waterchon.mx</li></ul></div>
+          <div className="space-y-6 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3">
+              <div className="bg-white p-2 rounded-xl"><Droplets className="text-blue-600" /></div>
+              <span className="text-3xl font-black italic italic tracking-tighter uppercase">Water<span className="text-blue-500">Chon</span></span>
+            </div>
+            <p className="text-slate-500 italic font-medium">Pureza garantizada en cada gota, servicio garantizado en cada sucursal.</p>
+          </div>
+          <div className="text-center md:text-left">
+            <h5 className="text-blue-500 font-black uppercase italic tracking-widest mb-8 text-xs">Menú</h5>
+            <ul className="space-y-4 font-bold text-slate-400 text-sm">
+              <li>Servicios</li><li>Pedidos</li><li>Sucursales</li><li>Galería</li><li>Vacantes</li>
+            </ul>
+          </div>
+          <div className="text-center md:text-left">
+            <h5 className="text-blue-500 font-black uppercase italic tracking-widest mb-8 text-xs">Contáctanos</h5>
+            <ul className="space-y-4 font-bold text-slate-400 text-sm">
+              <li className="flex items-center justify-center md:justify-start gap-3"><Phone size={16} className="text-blue-500"/> (667) 123-4567</li>
+              <li className="flex items-center justify-center md:justify-start gap-3"><Mail size={16} className="text-blue-500"/> contacto@waterchon.mx</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-16 text-center text-slate-700 text-[10px] font-black uppercase tracking-[0.3em]">
+          © 2026 Grupo WaterChon S.A. de C.V. Culiacán, Sinaloa.
         </div>
       </footer>
+
+      {/* Lightbox */}
+      {selectedImage && (
+        <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <button className="absolute top-10 right-10 text-white"><X size={48}/></button>
+          <img src={selectedImage} className="max-w-full max-h-[85vh] rounded-3xl border-4 border-white/10 shadow-2xl" alt="Preview" />
+        </div>
+      )}
     </>
   );
 
@@ -275,14 +357,20 @@ export default function App() {
   const AdminPanel = () => {
     if (!user || user.isAnonymous) {
       return (
-        <section className="h-screen flex items-center justify-center bg-slate-50 p-4">
+        <section className="h-screen flex items-center justify-center bg-slate-100 p-4">
           <div className="bg-white p-12 rounded-[3rem] shadow-2xl w-full max-w-md border border-slate-100">
             <div className="w-16 h-16 bg-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-8 text-white"><Lock size={32} /></div>
-            <h2 className="text-3xl font-black uppercase text-center mb-8 italic italic tracking-tighter">Acceso <span className="text-blue-600">Admin</span></h2>
+            <h2 className="text-3xl font-black uppercase text-center mb-8 italic tracking-tighter">Acceso <span className="text-blue-600">Admin</span></h2>
             <form onSubmit={handleLogin} className="space-y-4">
-              <input name="email" type="email" placeholder="Usuario" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" required />
-              <input name="password" type="password" placeholder="Contraseña" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" required />
-              <button className="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-xl italic tracking-widest">INGRESAR AL PANEL</button>
+              <div className="space-y-2">
+                <label className="text-[10px] font-black uppercase text-slate-400 pl-2 tracking-widest">Email</label>
+                <input name="email" type="email" placeholder="admin@waterchon.mx" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" required />
+              </div>
+              <div className="space-y-2">
+                <label className="text-[10px] font-black uppercase text-slate-400 pl-2 tracking-widest">Password</label>
+                <input name="password" type="password" placeholder="••••••••" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" required />
+              </div>
+              <button className="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-xl italic tracking-widest hover:bg-blue-700 transition-all">INGRESAR AL PANEL</button>
               <button type="button" onClick={() => setSiteMode('landing')} className="w-full text-slate-400 font-black text-xs uppercase mt-4">Volver al sitio público</button>
             </form>
           </div>
@@ -303,16 +391,19 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 mt-12 grid lg:grid-cols-2 gap-12">
           {/* Subir Fotos */}
           <div className="space-y-8">
-            <div className="bg-white p-10 rounded-[3rem] shadow-xl">
-              <h3 className="text-xl font-black mb-8 uppercase italic italic flex items-center gap-3"><Camera className="text-blue-600"/> Gestionar Galería</h3>
+            <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50">
+              <h3 className="text-xl font-black mb-8 uppercase italic flex items-center gap-3"><Camera className="text-blue-600"/> Gestionar Galería</h3>
               <form onSubmit={handlePhotoUpload} className="space-y-4">
                 <input name="titulo" placeholder="Título de la foto" required className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
-                <input name="photo_file" type="file" accept="image/*" required className="w-full p-4 bg-slate-50 border-2 border-dashed rounded-2xl font-bold text-xs" />
+                <div className="space-y-1">
+                  <label className="text-[10px] font-black text-slate-400 pl-2 uppercase tracking-widest">Archivo (Máx 5MB)</label>
+                  <input name="photo_file" type="file" accept="image/*" required className="w-full p-4 bg-slate-50 border-2 border-dashed rounded-2xl font-bold text-xs" />
+                </div>
                 <select name="tipo" className="w-full p-4 bg-slate-50 border-2 rounded-2xl font-bold outline-none">
-                  <option>Planta</option><option>Eventos</option><option>Sucursal</option>
+                  <option>Planta</option><option>Eventos</option><option>Sucursal</option><option>Calidad</option>
                 </select>
-                <button disabled={uploading} className={`w-full text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3 italic tracking-widest ${uploading ? 'bg-slate-400' : 'bg-slate-900 shadow-xl'}`}>
-                  {uploading ? <Loader2 className="animate-spin" /> : <Upload size={20} />} SUBIR A LA WEB
+                <button disabled={uploading} className={`w-full text-white py-4 rounded-2xl font-black flex items-center justify-center gap-3 italic tracking-widest ${uploading ? 'bg-slate-400' : 'bg-slate-900 shadow-xl hover:bg-slate-800 transition-all'}`}>
+                  {uploading ? <Loader2 className="animate-spin" /> : <Upload size={20} />} {uploading ? 'SUBIENDO...' : 'SUBIR A LA WEB'}
                 </button>
               </form>
             </div>
@@ -331,22 +422,22 @@ export default function App() {
 
           {/* Gestión Vacantes */}
           <div className="space-y-8">
-            <div className="bg-white p-10 rounded-[3rem] shadow-xl">
-              <h3 className="text-xl font-black mb-8 uppercase italic italic flex items-center gap-3"><PlusCircle className="text-blue-600"/> Publicar Vacante</h3>
+            <div className="bg-white p-10 rounded-[3rem] shadow-xl border border-blue-50">
+              <h3 className="text-xl font-black mb-8 uppercase italic flex items-center gap-3"><PlusCircle className="text-blue-600"/> Publicar Vacante</h3>
               <form onSubmit={handleVacanteAdd} className="space-y-4">
                 <input name="titulo" placeholder="Puesto" required className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
                 <div className="grid grid-cols-2 gap-4">
-                  <input name="sueldo" placeholder="Sueldo" required className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
+                  <input name="sueldo" placeholder="Sueldo (Semanal)" required className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
                   <input name="horario" placeholder="Horario" required className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <select name="color" className="w-full p-4 bg-slate-50 border-2 rounded-2xl font-bold outline-none"><option value="blue">Azul</option><option value="teal">Aqua</option><option value="slate">Negro</option></select>
-                  <input name="categoria" placeholder="Categoría" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
+                  <input name="categoria" placeholder="Categoría (ej. Producción)" className="w-full p-4 bg-slate-50 border-2 rounded-2xl outline-none font-bold" />
                 </div>
-                <button className="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-xl italic tracking-widest">GUARDAR VACANTE</button>
+                <button className="w-full bg-blue-600 text-white py-4 rounded-2xl font-black shadow-xl italic tracking-widest hover:bg-blue-700 transition-all">GUARDAR VACANTE</button>
               </form>
             </div>
-            <div className="bg-white p-8 rounded-[3rem] shadow-xl">
+            <div className="bg-white p-8 rounded-[3rem] shadow-xl border border-slate-100">
               <h3 className="font-black mb-6 uppercase italic text-xs tracking-[0.3em] text-blue-600">Bolsa Activa</h3>
               <div className="space-y-3">
                 {vacantes.map(v => (
