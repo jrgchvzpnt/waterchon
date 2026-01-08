@@ -165,7 +165,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="bg-white p-2 rounded-xl shadow-lg"><Droplets className="text-blue-600 w-6 h-6" /></div>
-            <span className="text-xl font-black italic uppercase">Water<span className="text-blue-400">Chon</span></span>
+            <span className="text-xl font-black italic uppercase tracking-tighter">Water<span className="text-blue-400">Chon</span></span>
           </div>
           <div className="hidden lg:flex gap-8 font-bold text-xs uppercase italic">
             <a href="#aliados" className="hover:text-blue-400 transition-colors">Aliados</a>
@@ -183,12 +183,17 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
           <div className="flex-1 space-y-8 text-center lg:text-left">
             <span className="bg-blue-50 text-blue-700 px-6 py-2 rounded-full text-xs font-black uppercase tracking-[0.3em] border border-blue-100 shadow-sm">Culiacán, Sinaloa</span>
-            <h1 className="text-6xl md:text-8xl font-black leading-[0.9] text-slate-900 tracking-tighter uppercase italic italic">Agua <br/><span className="text-blue-600">Alcalina</span> <br/>y Normal.</h1>
-            <p className="text-slate-500 text-xl italic max-w-lg mx-auto lg:mx-0 font-medium">Calidad premium para tu familia, directamente hasta tu puerta.</p>
-            <a href="#pedidos" className="inline-block bg-blue-600 text-white px-12 py-5 rounded-3xl font-black text-xl shadow-2xl hover:bg-blue-700 transition-all uppercase italic">Pide ahora</a>
+            <h1 className="text-6xl md:text-8xl font-black leading-[0.9] text-slate-900 tracking-tighter uppercase italic italic">Calidad <br/><span className="text-blue-600">Insuperable</span> <br/>en cada gota.</h1>
+            <p className="text-slate-500 text-xl italic max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed">Sabor único y procesos de purificación avanzados para el bienestar de tu familia.</p>
+            <a href="#pedidos" className="inline-block bg-blue-600 text-white px-12 py-5 rounded-3xl font-black text-xl shadow-2xl hover:bg-blue-700 transition-all uppercase italic">Pedir a domicilio</a>
           </div>
-          <div className="flex-1 relative">
-            <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=1000" className="rounded-[60px] shadow-2xl border-[15px] border-white w-full h-[550px] object-cover" alt="WaterChon Hero" />
+          <div className="flex-1 relative group">
+            <div className="relative rounded-[60px] overflow-hidden shadow-2xl border-[15px] border-white">
+              <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&q=80&w=1000" className="w-full h-[550px] object-cover" alt="WaterChon Hero" />
+              <div className="absolute bottom-10 left-10 right-10 bg-blue-600/90 text-white p-8 rounded-[40px] backdrop-blur-md shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
+                <p className="font-black italic uppercase tracking-tighter text-xl leading-none">Sabor que refresca, confianza que perdura.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,7 +204,7 @@ export default function App() {
           <h2 className="text-center text-xs font-black uppercase tracking-[0.4em] text-slate-400 mb-12 italic">Marcas que confían en nosotros</h2>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-1000">
             {['CONSTRUCTORA', 'RETAIL MX', 'INDUSTRIA PRO', 'LOGÍSTICA CLN', 'AGRÍCOLA S.A.', 'SERVICIOS PRO'].map(logo => (
-              <div key={logo} className="font-black italic text-2xl tracking-tighter text-slate-400">{logo}</div>
+              <div key={logo} className="font-black italic text-2xl tracking-tighter text-slate-400 uppercase">{logo}</div>
             ))}
           </div>
         </div>
@@ -230,19 +235,20 @@ export default function App() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 bg-slate-50 rounded-[3rem] mb-20 border-2 border-dashed border-slate-200">
+              <div className="text-center py-24 bg-slate-50 rounded-[3rem] mb-20 border-2 border-dashed border-slate-200">
                 <Tag className="mx-auto text-slate-300 w-16 h-16 mb-4" />
-                <p className="font-black italic text-slate-400 uppercase tracking-widest">Próximamente productos en línea</p>
+                <p className="font-black italic text-slate-400 uppercase tracking-widest">Inventario en actualización</p>
+                <p className="text-slate-400 font-bold italic text-sm mt-2">Próximamente podrás ver nuestros productos aquí.</p>
               </div>
             )}
 
             <form onSubmit={handleSendOrder} className="max-w-4xl mx-auto space-y-8 bg-blue-600 p-10 md:p-16 rounded-[4rem] text-white shadow-2xl">
               <div className="grid md:grid-cols-2 gap-8">
-                <input name="order_name" placeholder="Nombre" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
-                <input name="order_phone" type="tel" placeholder="WhatsApp" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
+                <input name="order_name" placeholder="Tu Nombre" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
+                <input name="order_phone" type="tel" placeholder="Tu WhatsApp" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
               </div>
-              <input name="order_address" placeholder="Dirección de entrega" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
-              <button className="w-full bg-white text-blue-600 py-6 rounded-3xl font-black text-2xl shadow-xl italic uppercase">Confirmar por WhatsApp</button>
+              <input name="order_address" placeholder="Dirección de entrega completa" className="w-full p-5 bg-white/10 border-2 border-white/10 rounded-3xl outline-none font-bold placeholder:text-blue-200" required />
+              <button className="w-full bg-white text-blue-600 py-6 rounded-3xl font-black text-2xl shadow-xl italic uppercase hover:bg-blue-50 transition-colors">Confirmar Pedido</button>
             </form>
           </div>
         </div>
@@ -261,7 +267,7 @@ export default function App() {
               { title: 'Súper Margarita', loc: 'Col. Margarita', icon: <Store />, map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58058.456!2d-107.38!3d24.78' }
             ].map((suc, i) => (
               <div key={i} className="bg-blue-900 rounded-[3.5rem] p-8 shadow-2xl border border-blue-800 text-white group hover:border-blue-400 transition-all duration-500">
-                <div className="w-full h-52 rounded-[2.5rem] overflow-hidden mb-8 border border-blue-700/50 bg-slate-900">
+                <div className="w-full h-52 rounded-[2.5rem] overflow-hidden mb-8 border border-blue-700/50 bg-slate-900 shadow-inner">
                    <iframe src={suc.map} width="100%" height="100%" style={{border:0, filter: 'invert(90%) hue-rotate(180deg)'}} allowFullScreen="" loading="lazy"></iframe>
                 </div>
                 <div className="flex items-center gap-3 mb-2">
@@ -292,9 +298,10 @@ export default function App() {
               ))}
             </div>
           ) : (
-            <div className="py-24 bg-white/5 rounded-[4rem] border-2 border-dashed border-white/10">
-              <Camera className="mx-auto text-white/20 w-16 h-16 mb-4" />
-              <p className="font-black italic text-white/20 uppercase tracking-widest">Próximamente fotos de nuestras plantas</p>
+            <div className="py-32 bg-white/5 rounded-[4rem] border-2 border-dashed border-white/10 flex flex-col items-center justify-center">
+              <Camera className="text-white/20 w-16 h-16 mb-4" />
+              <p className="font-black italic text-white/20 uppercase tracking-widest text-lg">Galería en proceso</p>
+              <p className="text-white/10 font-bold italic mt-2">Próximamente fotos de nuestras plantas y procesos.</p>
             </div>
           )}
         </div>
@@ -303,7 +310,7 @@ export default function App() {
       {/* Vacantes */}
       <section id="vacantes" className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-5xl font-black mb-20 uppercase italic">Bolsa de <span className="text-blue-600">Trabajo</span></h2>
+          <h2 className="text-5xl font-black mb-20 uppercase italic tracking-tighter text-slate-900">Bolsa de <span className="text-blue-600">Trabajo</span></h2>
           {vacantes.length > 0 ? (
             <div className="grid md:grid-cols-3 gap-10">
               {vacantes.map(v => (
@@ -322,23 +329,23 @@ export default function App() {
               ))}
             </div>
           ) : (
-            <div className="py-20 bg-slate-50 rounded-[4rem] border-2 border-dashed border-slate-200 max-w-2xl mx-auto">
-              <Briefcase className="mx-auto text-slate-300 w-16 h-16 mb-4" />
-              <p className="font-black italic text-slate-400 uppercase tracking-widest mb-2">Sin vacantes disponibles</p>
-              <p className="text-slate-400 font-bold italic text-sm">Por el momento no tenemos posiciones abiertas, ¡vuelve pronto!</p>
+            <div className="py-24 bg-slate-50 rounded-[4rem] border-2 border-dashed border-slate-200 max-w-2xl mx-auto flex flex-col items-center justify-center">
+              <Briefcase className="text-slate-300 w-16 h-16 mb-4" />
+              <p className="font-black italic text-slate-400 uppercase tracking-widest text-lg">Sin vacantes activas</p>
+              <p className="text-slate-400 font-bold italic text-sm mt-2">Por el momento no tenemos posiciones abiertas, ¡vuelve pronto!</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Footer Restaurado */}
+      {/* Footer */}
       <footer className="bg-slate-950 text-white pt-32 pb-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
             <div className="space-y-8 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-4 cursor-pointer" onClick={secretTrigger}>
                 <div className="bg-white p-3 rounded-2xl"><Droplets className="text-blue-600 w-8 h-8" /></div>
-                <span className="text-4xl font-black italic tracking-tighter uppercase">Water<span className="text-blue-500">Chon</span></span>
+                <span className="text-4xl font-black italic tracking-tighter uppercase italic">Water<span className="text-blue-500">Chon</span></span>
               </div>
               <p className="text-slate-500 italic font-bold text-lg max-w-sm mx-auto md:mx-0">Pureza total y servicios integrales para las familias de Culiacán.</p>
             </div>
